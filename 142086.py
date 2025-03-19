@@ -2,14 +2,14 @@
 
 def solution(s):
     answer = []
-    dict = {}
+    dic = {}
 
     for idx, word in enumerate(s):
-        if word not in dict:
+        if word not in dic:
             answer.append(-1)
-            dict[word] = idx
+            dic[word] = idx
         else:
-            answer.append(idx - dict[word])
-            dict[word] = idx
+            answer.append(idx - dic[word])
+            dic[word] = idx
 
     return answer
